@@ -25,6 +25,57 @@ const dental = [
    {hora: '14:00', especialista: 'Raquel Villaseca', paciente: 'Ana Sepulveda', rut: '14441281-0', prevision: 'ISAPRE'},
 ]
 
+const radioConsultas = document.querySelector('.stats__length-r');
+const trauConsultas = document.querySelector('.stats__length-t');
+const dentalConsultas = document.querySelector('.stats__length-d');
+const radioAtenciones = document.querySelector('.stats__first-atention-r');
+const trauAtenciones = document.querySelector('.stats__first-atention-t');
+const dentalAtenciones = document.querySelector('.stats__first-atention-d');
+
+
+insertarConsultas()
+function insertarConsultas() {
+   let valorR = document.createElement('p');
+   let valorT = document.createElement('p');
+   let valorD = document.createElement('p');
+   valorR.innerText = radiologia.length;
+   valorT.innerText = traumatologia.length;
+   valorD.innerText = dental.length;
+   radioConsultas.appendChild(valorR);
+   trauConsultas.appendChild(valorT);
+   dentalConsultas.appendChild(valorD);
+}
+
+insertarAtenciones()
+function insertarAtenciones() {
+   let firstR = document.createElement('p');
+   let firstT = document.createElement('p');
+   let firstD = document.createElement('p');
+   let lastR = document.createElement('p');
+   let lastT = document.createElement('p');
+   let lastD = document.createElement('p');
+   firstR.textContent = `
+   Paciente: ${radiologia[0].paciente} | Rut: ${radiologia[0].rut} | Previsión: ${radiologia[0].prevision}`;
+   firstT.textContent = `
+   Paciente: ${traumatologia[0].paciente} | Rut: ${traumatologia[0].rut} | Previsión: ${traumatologia[0].prevision}`;
+   firstD.textContent = `
+   Paciente: ${dental[0].paciente} | Rut: ${dental[0].rut} | Previsión: ${dental[0].prevision}`;
+   lastR.textContent = `
+   Paciente: ${radiologia[4].paciente} | Rut: ${radiologia[4].rut} | Previsión: ${radiologia[4].prevision}`;
+   lastT.textContent = `
+   Paciente: ${traumatologia[6].paciente} | Rut: ${traumatologia[6].rut} | Previsión: ${traumatologia[6].prevision}`;
+   lastD.textContent = `
+   Paciente: ${dental[5].paciente} | Rut: ${dental[5].rut} | Previsión: ${dental[5].prevision}`;
+   
+   radioAtenciones.appendChild(firstR);
+   trauAtenciones.appendChild(firstT);
+   dentalAtenciones.appendChild(firstD);
+   document.querySelector('.stats__last-atention-r').appendChild(lastR);
+   document.querySelector('.stats__last-atention-t').appendChild(lastT);
+   document.querySelector('.stats__last-atention-d').appendChild(lastD);
+} 
+
+
 console.log(radiologia)
 console.log(traumatologia)
 console.log(dental)
