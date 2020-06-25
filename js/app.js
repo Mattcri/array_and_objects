@@ -75,6 +75,9 @@ function insertarAtenciones() {
    document.querySelector('.stats__last-atention-d').appendChild(lastD);
 } 
 
+traumatologia.push({hora: '09:00', especialista: 'René Poblete', paciente: 'Ana Gellona', rut: '13123329-7', prevision: 'ISAPRE'}, {hora: '09:30', especialista: 'María Solar', paciente: 'Ramiro Andrade', rut: '12221451-k', prevision: 'FONASA'}, {hora: '10:00', especialista: 'Raul Loyola', paciente: 'Carmen Isla', rut: '10112348-3', prevision: 'ISAPRE'}, {hora: '10:30', especialista: 'Antonio Larenas', paciente: 'Pablo Loayza', rut: '13453234-1', prevision: 'ISAPRE'}, {hora: '12:00', especialista: 'Matías Aravena', paciente: 'Susana Poblete', rut: '14345656-6', prevision: 'FONASA'});
+radiologia.pop();
+radiologia.shift();
 
 console.log(radiologia)
 console.log(traumatologia)
