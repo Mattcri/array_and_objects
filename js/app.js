@@ -61,11 +61,11 @@ function insertarAtenciones() {
    firstD.textContent = `
    Paciente: ${dental[0].paciente} | Rut: ${dental[0].rut} | Previsión: ${dental[0].prevision}`;
    lastR.textContent = `
-   Paciente: ${radiologia[4].paciente} | Rut: ${radiologia[4].rut} | Previsión: ${radiologia[4].prevision}`;
+   Paciente: ${radiologia[radiologia.length-1].paciente} | Rut: ${radiologia[radiologia.length-1].rut} | Previsión: ${radiologia[radiologia.length-1].prevision}`;
    lastT.textContent = `
-   Paciente: ${traumatologia[6].paciente} | Rut: ${traumatologia[6].rut} | Previsión: ${traumatologia[6].prevision}`;
+   Paciente: ${traumatologia[traumatologia.length-1].paciente} | Rut: ${traumatologia[traumatologia.length-1].rut} | Previsión: ${traumatologia[traumatologia.length-1].prevision}`;
    lastD.textContent = `
-   Paciente: ${dental[5].paciente} | Rut: ${dental[5].rut} | Previsión: ${dental[5].prevision}`;
+   Paciente: ${dental[dental.length-1].paciente} | Rut: ${dental[dental.length-1].rut} | Previsión: ${dental[dental.length-1].prevision}`;
    
    radioAtenciones.appendChild(firstR);
    trauAtenciones.appendChild(firstT);
